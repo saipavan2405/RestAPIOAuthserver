@@ -1,0 +1,24 @@
+server:
+  port: 9000
+
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8079/eureka
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sys
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+  application:
+    name: OAuthserver
+
